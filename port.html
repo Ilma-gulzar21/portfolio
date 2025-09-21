@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilma-gulzar - Portfolio</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #6b48ff;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6b48ff, #b78cff);
+    padding: 100px 20px 20px;
+    color: #fff;
+    position: relative;
+    top: -50px;
+}
+
+.content {
+    max-width: 50%;
+}
+.name{
+     font-size:50px;
+
+}
+.content h2 {
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.headline{
+   font-size:20px;
+   font-weight: 600;
+}
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.stats span {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background: #00cc88;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn.connect {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.image-section {
+    position: relative;
+    text-align: center;
+}
+
+.image-section img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tech-stack {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tech-stack h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tech-icons span {
+    background: #fff;
+    color: #6b48ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.view-work {
+    margin-top: 20px;
+    background: #6b48ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu on tablets, can add a hamburger menu if needed */
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .image-section {
+        margin-top: 20px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 10px 10px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .image-section img {
+        width: 200px;
+    }
+
+    .tech-icons {
+        flex-direction: column;
+    }
+
+    .tech-icons span {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+/* Multi-Color About Me Section */
+.about-me-multi {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image {
+    border: 5px solid #f4a261; /* Yellow border */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #2a9d8f; /* Teal for title */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.hire-btn {
+    background-color: #f4a261; /* Yellow button */
+    color: #fff;
+}
+
+.hire-btn:hover {
+    transform: scale(1.05);
+}
+
+.download-btn {
+    background-color: #e76f51; /* Orange button */
+    color: #fff;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Multi-Color About Me Section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image img {
+        width: 150px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* Experience Section with Split Vertical Layout */
+.experience-section-split {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-section-split::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6b48ff, #9d4edd);
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #6b48ff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-line {
+    width: 2px;
+    background-color: #9d4edd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #9d4edd;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot:nth-child(1) {
+    top: 20%;
+}
+
+.dot:nth-child(2) {
+    bottom: 20%;
+}
+
+.exp-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 2;
+}
+
+.top-card {
+    align-self: flex-start;
+    margin-bottom: 40px;
+}
+
+.bottom-card {
+    align-self: flex-end;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header .icon {
+    font-size: 20px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    color: #6b48ff;
+    margin: 0;
+}
+
+.card-header .company {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.duration {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills li {
+    font-size: 14px;
+    color: #6b48ff;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.skills li::before {
+    content: '•';
+    color: #9d4edd;
+    position: absolute;
+    left: 0;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design for Experience Section */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .exp-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .top-card, .bottom-card {
+        align-self: center;
+    }
+
+    .vertical-line {
+        left: 10%;
+        height: 80%;
+    }
+
+    .dot {
+        left: 10%;
+    }
+
+    .dot:nth-child(1) {
+        top: 25%;
+    }
+
+    .dot:nth-child(2) {
+        bottom: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .exp-card {
+        width: 90%;
+    }
+
+    .card-header h3 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+/* ===== Skills Section (simple vanilla CSS) ===== */
+.skills-sec{
+  color:#eef0f6;
+  padding:32px 16px 56px;
+  background:
+    radial-gradient(900px 500px at 10% -10%, rgba(255,255,255,0.05), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(255,255,255,0.04), transparent 60%),
+    linear-gradient(135deg, #182854, #22357f 50%, #3f4d93);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.skills-title{
+  font-size:42px; font-weight:800; text-align:center; margin:0 0 8px;
+}
+.skills-sub{
+  text-align:center; color:#cbd2ea; max-width:760px; margin:0 auto 28px; line-height:1.55;
+}
+
+/* layout */
+.skills-grid{
+  display:grid; gap:28px;
+}
+@media (min-width:900px){
+  .skills-grid{ grid-template-columns: 1.1fr 1fr; gap:34px; }
+}
+
+/* headings */
+.col-head{
+  font-size:20px; font-weight:800; margin:8px 0 14px;
+  position:relative; padding-bottom:6px;
+}
+.col-head::after{
+  content:""; position:absolute; left:0; bottom:0; height:4px; width:64px;
+  background:#8fa2ff; border-radius:8px; box-shadow:0 2px 10px rgba(143,162,255,.4);
+}
+
+/* skills list */
+.skill-item{ margin:16px 0 18px; }
+.skill-row{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.skill-name{ font-weight:700; margin-left:8px; flex:1; }
+.skill-pct{ color:#c9d1ec; font-weight:700; font-size:14px; }
+
+/* badge (small square icon) */
+.badge{
+  width:30px; height:30px; display:inline-grid; place-items:center;
+  border-radius:8px; color:#fff; font-weight:800; font-size:12px;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 6px 16px rgba(0,0,0,.22);
+  margin-right:8px;
+}
+
+/* progress bars */
+.bar{
+  height:10px; border-radius:10px; background:rgba(255,255,255,0.12);
+  overflow:hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+.fill{ display:block; height:100%; border-radius:10px; }
+
+/* bar colors (close to screenshot theme) */
+.badge-blue{   background:#1f5bff22; }
+.fill-blue{    background:linear-gradient(90deg,#8dbbff,#6aa6ff); }
+
+.badge-yellow{ background:#f0b30122; }
+.fill-yellow{  background:linear-gradient(90deg,#ffd86a,#f0b301); }
+
+.badge-green{  background:#3fb67a22; }
+.fill-green{   background:linear-gradient(90deg,#90e5bf,#3fb67a); }
+
+.badge-teal{   background:#2fb7a322; }
+.fill-teal{    background:linear-gradient(90deg,#85eadf,#2fb7a3); }
+
+.badge-purple{ background:#a073ff22; }
+.fill-purple{  background:linear-gradient(90deg,#cdb2ff,#a073ff); 
+}
+
+.badge-orange{
+     background:#d2933d22;
+     }
+.fill-orange{ 
+     background:linear-gradient(90deg,#f6c483,#d2933d);
+     }
+
+/* cards on right */
+.cards{
+  display:grid; gap:18px;
+   grid-template-columns: 1fr;
+}
+@media (min-width:600px){ 
+    .cards{ grid-template-columns: 1fr 1fr;
+     } }
+
+.card{
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:16px; padding:16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+}
+.card-ico{
+  width:50px;
+   height:50px;
+    border-radius:12px;
+     display:grid;
+      place-items:center;
+  background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.16);
+  color:#fff; font-weight:800;
+}
+.card h4{ margin:10px 0 8px; font-size:16px; }
+.card ul{ margin:0; padding-left:18px; color:#dfe4f4; line-height:1.6;
+ }
+
+
+.projects {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+
+  /* 👇 Background only for projects section */
+ background-color: #f9f9f9;
+}
+
+.card {
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background:rgba(255,255,255,0.1);
+  /* box-shadow: 0 4px 15px rgba(0,0,0,0.3); */
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-top {
+  padding: 20px;
+  color: #fff;
+  min-height: 220px;
+  position: relative;
+}
+.card-top h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.card-top p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card-bottom {
+  background: white;
+  padding: 15px 20px;
+}
+
+.tags {
+  margin-bottom: 12px;
+}
+.tags span {
+  background:purple;
+  color:white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  margin: 3px;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.demo, .code {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.demo {
+  background: #4f46e5;
+  color: #fff;
+}
+.code {
+  background: orange;
+  color: #fff;
+}
+
+/* Status Badge */
+.status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.completed {
+  background: #28a745;
+
+}
+.progress {
+  background: #ff9800;
+
+}
+
+/* Icons */
+.icon {
+  font-size: 40px;
+}
+
+/* Gradient Colors */
+.purple {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+   border-radius: 10px;
+}
+.green {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+   border-radius: 10px;
+}
+.pink {
+  background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+   border-radius: 10px;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <h1>ILMA GULZAR</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h1 class="name">Hi, I'm <span>ILMA GULZAR</span></h1>
+            <div class="headline">FRONTEND DEVELOPER</div>
+
+            <p>MCA first year student at AMU | BCA Graduate | Skilled in HTML | CSS | JavaScript | Bootstrap | c\c++ | SQL | Exploring Backend with Node.js</p>
+            <div class="stats">
+                <div><span>2+</span> Internships</div>
+                <div><span>4+</span> Projects</div>
+                <div><span>2+</span> Years Learning</div>
+            </div>
+            <div class="buttons">
+                <button class="btn">View Resume</button>
+                <button class="btn">Download Resume</button>
+                <button class="btn connect">Let's Connect</button>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="ilma2.jpg" alt="ILMA GULZAR">
+            <div class="tech-stack">
+                <h3>Tech Stack</h3>
+                <div class="tech-icons">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>JavaScript</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+            <button class="btn view-work">View My Work</button>
+        </div>
+    </section>
+
+    <section class="about-me-multi" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="ilma2.jpg" alt="Your Name">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi, I’m Ilma Gulzar <br> pursuing MCA at Aligarh Muslim University and i exploring technology and bringing new ideas to life. I enjoy working on projects that challenge my creativity and problem-solving skills. Apart from academics, I love designing, learning new tools, and continuously improving myself. My goal is to grow as a professional developer and create meaningful projects that make a positive impact.</p>
+                <div class="about-buttons">
+                    <button class="btn hire-btn">Hire Me</button>
+                    <button class="btn download-btn">Download CV</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="experience-section-split">
+        <div class="experience-container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="vertical-line">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="exp-card top-card">
+                    <div class="card-header">
+                        <span class="icon">🎓</span>
+                        <h3>Currently Pursuing <br>  MCA</h3>
+                        <p class="company">Aligarh Muslim University</p>
+                    </div>
+                    <p class="duration">2025 - Present</p>
+                    <p class="description">Pursuing a degree with a focus on programming, software development, and modern technologies. Engaged in practical projects and internships.</p>
+                    <ul class="skills">
+                        <li>Programming</li>
+                        <li>Software Development</li>
+                    </ul>
+                </div>
+                <div class="exp-card bottom-card">
+                    <div class="card-header">
+                        <span class="icon">📜</span>
+                        <h3>Bachelor Of Computer Application</h3>
+                        <p class="company">Tika Ram Girls Degree College</p>
+                    </div>
+                    <p class="duration">2022 - 2025 (Completed)</p>
+                    <p class="description">Completed specialized training in computer applications and programming, building a strong technical foundation.</p>
+                    <ul class="skills">
+                        <li>Computer Applications</li>
+                        <li>Technical Skills</li>
+                    </ul>
+                </div>
+                <div class="exp-card top-card">
+                    <div class="card-header">
+                        <span class="icon">🎓</span>
+                        <h3>CLASS 12TH</h3>
+                        <p class="company">MODERN SIR SAYED INTER COLLEGE</p>
+                    </div>
+                    <p class="duration">2020 2021</p>
+                    <p class="description">I completed my Class 12 from Modern Sir Syed School/College with 75% marks. During my higher secondary education, I developed a strong academic foundation and focused on both theoretical as well as practical knowledge. This stage of learning helped me in building discipline, consistency, and analytical skills, which are essential for my higher studies and career growth.</p>
+                    <ul class="skills"> 
+                    </ul>
+                </div>
+                <div class="exp-card bottom-card">
+                    <div class="card-header">
+                        <span class="icon">📜</span>
+                        <h3>CLASS 10TH</h3>
+                        <p class="company">MODERN SIR SAYED INTER COLLEGE</p>
+                    </div>
+                    <p class="duration">2019- 2020 (Completed)</p>
+                    <p class="description">I completed my Class 10 from Modern Sir Syed School/College with 75% marks. This stage of my education helped me build a strong foundation in core subjects and develop important skills such as discipline, problem-solving, and time management. It also prepared me for higher studies and motivated me to achieve better academic and personal growth..</p>
+                    <ul class="skills">
+                        <li>Computer Applications</li>
+                        <li>Technical Skills</li>
+                    </ul>
+                </div>+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="skills-sec">
+  <h2 class="skills-title">Skills & Technologies</h2>
+  <p class="skills-sub">
+    Crafting digital experiences with cutting-edge technologies and modern development practices
+  </p>
+
+  <div class="skills-grid">
+    <div>
+      <h3 class="col-head">Technical Expertise</h3>
+
+      <div class="skill-item">
+        <div class="skill-row">
+          <span class="badge badge-blue">&lt;/&gt;</span>
+          <span class="skill-name">HTML</span>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="bar">
+          <span class="fill fill-blue" style="width:85%"></span>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-row">
+          <span class="badge badge-yellow">JS</span>
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="bar">
+          <span class="fill fill-yellow" style="width:80%"></span>
+        </div>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="skill-item">
+        <div class="skill-row">
+          <span class="badge badge-green">B</span>
+          <span class="skill-name">Bootstrap</span>
+          <span class="skill-pct">75%</span>
+        </div>
+        <div class="bar">
+          <span class="fill fill-green" style="width:75%"></span>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="skill-item">
+        <div class="skill-row">
+          <span class="badge badge-teal">CSS</span>
+          <span class="skill-name">CSS</span>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="bar">
+          <span class="fill fill-teal" style="width:70%"></span>
+        </div>
+      </div>
+
+      <!-- C/C++ -->
+      <div class="skill-item">
+        <div class="skill-row">
+          <span class="badge badge-purple">C++</span>
+          <span class="skill-name">C / C++</span>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="bar">
+          <span class="fill fill-purple" style="width:65%"></span>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-row">
+          <span class="badge badge-orange">SQL</span>
+          <span class="skill-name">SQL</span>
+          <span class="skill-pct">60%</span>
+        </div>
+        <div class="bar">
+          <span class="fill fill-orange" style="width:60%"></span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="col-head">Core Competencies</h3>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-ico">&lt;/&gt;</div>
+          <h4>Frontend</h4>
+          <ul>
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>CSS / Bootstrap</li>
+            <li>Responsive UI</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-ico">DB</div>
+          <h4>Backend</h4>
+          <ul>
+            <li>REST APIs (Basics)</li>
+            <li>Authentication (Basics)</li>
+            <li>SQL</li>
+            <li>Data Modeling</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-ico">🛠</div>
+          <h4>Tools</h4>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>Chrome DevTools</li>
+            <li>Postman</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-ico">☁</div>
+          <h4>Deployment</h4>
+          <ul>
+            <li>Netlify</li>
+            <li>Vercel</li>
+            <li>GitHub Pages</li>
+            <li>CI/CD (Basic)</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <h2 class="skills-title">Projects</h2>
+<section class="projects">
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="card-top purple">
+      <div class="status completed">Completed</div>
+      <div class="icon">A Fullly Responsive Blogging Plateform with Interactive Features</div>
+      <h3>A Blog Website</h3>
+      <p>I have developed a fully responsive blog website using HTML, CSS, and JavaScript, which works seamlessly across all devices. The website includes advanced features such as a comment section, like system, and view counter, providing an interactive and engaging user experience. It is designed with a clean and attractive layout, ensuring both readability and usability. This project not only demonstrates my front-end development skills.</p>
+    </div>
+    <div class="card-bottom">
+  
+      <div class="buttons">
+        <a href="#" class="demo">Demo</a>
+        <a href="#" class="code">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="card-top green">
+      <div class="status completed">Completed</div>
+      <div class="icon">A simple, Accurate web Based Currency Converter Tool</div>
+      <h3>Currency Converter</h3>
+      <p>I created a Currency Converter web application using HTML, CSS, and JavaScript, which allows users to quickly convert values between different currencies. The application is fully responsive and designed with a simple, user-friendly interface for easy access on any device. It uses real-time conversion logic to ensure accurate results and provides a smooth experience for users. This project highlights my ability to build practical and interactive applications with clean design and efficient functionality</p>
+    </div>
+    <div class="card-bottom">
+
+      <div class="buttons">
+        <a href="#" class="demo">Demo</a>
+        <a href="#" class="code">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="card-top pink">
+      <div class="status completed">Completed</div>
+      <div class="icon">Saveral<br> Mini Projects</div>
+      <h3>GAMES</h3>
+      <p>I have developed a collection of mini games including Tic Tac Toe, Rock Paper Scissors, and Simon Says using HTML, CSS, and JavaScript, which run smoothly across all devices. These games are fully responsive and feature visually engaging layouts, offering an interactive and enjoyable experience to users. Each game is implemented with simple yet effective logic, ensuring both clarity in functionality and ease of use. Additionally, I incorporated interactive elements, such as real-time score tracking, responsive animations, user-friendly controls, and dynamic visual feedback, to enhance user engagement and overall gaming experience. This project not only highlights my creativity, problem-solving skills, attention to detail, and coding proficiency but also demonstrates my ability to design practical, entertaining, visually appealing.</p>
+    </div>
+    <div class="card-bottom">
+      <div class="buttons">
+        <a href="#" class="demo">Demo</a>
+        <a href="#" class="code">Code</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
